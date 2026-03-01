@@ -6,8 +6,8 @@ from app.services.ml_model_service import time_to_zero
 
 router = APIRouter(prefix="/time-to-zero", tags=["time-to-zero"])
 
-@router.post("/", response_model=int, status_code=status.HTTP_201_CREATED)
-def getTimetoZero(session: Session = Depends(get_session)):
-    days = time_to_zero("Vibranium","Wakanda", session)
+@router.get("/", response_model=float, status_code=status.HTTP_201_CREATED)
+def getTimetoZero(location: str, resource: str, session: Session = Depends(get_session)):
+    hours = time_to_zero(resource_type=resource,location=location, session=session)
 
-    return days
+    return hours

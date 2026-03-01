@@ -125,6 +125,14 @@ def handle_form(
     # in the future, would be best to create a shared service layer to avoid calling endpoints directly
     create_liveIntelligenceReport(report, session)
 
+    response = {
+        "timestamp": timestamp,
+        "location": LLM_data['location'],
+        "resource_type": LLM_data['resource'],
+        'stock_level': LLM_data['quantity']
+
+    }
+
     # if there's not a success raise some kind of error? idk
     # return create_liveIntelligenceReport(report, session)
-    return {"test": "success"}
+    return response
