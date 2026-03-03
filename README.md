@@ -2,15 +2,11 @@
 
 **Project Sentinel** is a full-stack intelligence dashboard designed to monitor resource levels across multiple locations. It displays trends in an interactive chart, forecasts future shortages via a simple machine-learning algorithm, and extracts data from reports via a Large Language Model.
 
----
-
 ## Demo
 
 <p align="center">
   <img src="assets/demo_projectSentinel.gif" alt="Project Sentinel Demo" />
 </p>
-
----
 
 ## Features
 
@@ -44,8 +40,6 @@
 **Redaction Layer**
   - Redacts sensitive information before AI processing
   - Ensures secure data handling
-
----
 
 ## Tech Stack
 
