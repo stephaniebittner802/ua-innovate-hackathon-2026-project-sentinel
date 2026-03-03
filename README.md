@@ -1,6 +1,7 @@
 # Project Sentinel - UA Innovate Hackathon 2026
 
 **Project Sentinel** is a full-stack intelligence dashboard designed to monitor resource levels across multiple locations. It displays trends in an interactive chart, forecasts future shortages via a simple machine-learning algorithm, and extracts data from reports via a Large Language Model.
+This project was created during the UA Innovate Hackathon at The University of Alabama from February 28 to March 1, 2026.
 
 ## Demo
 
@@ -11,10 +12,9 @@
 ## Features
 
 **Interactive Dashboard**
-  - Visualize historical stock trends across multiple locations
-  - View the 20 most recent intelligence entries
+  - Visualize historical stock data across multiple locations
   - Select and filter by specific locations (Wakanda, New Asgard, Sokovia, Sanctum Sanctorum, Avengers Compound)
-  - Adjust the number of historical days displayed to analyze short-term or long-term trends (7 days, 30 days, 90 days, all)
+  - Adjust the number of historical days displayed to analyze short-term or long-term trends
 
 **Machine Learning Forecasting**
   - Uses StatsModels (OLS Regression) to forecast stock depletion
@@ -40,13 +40,14 @@
 **Redaction Layer**
   - Redacts sensitive information before AI processing
   - Ensures secure data handling
+  - Redacted logs can be viewed when pressing the 'Redacted Logs' button
 
 ## Tech Stack
 
 ### Frontend
 - Languages: HTML + CSS + JavaScript
 - Framework: React
-- Vite
+- Build Tool: Vite
 - Styling System: Tailwind CSS
 - Libraries: Recharts (Data Visualization), Radix UI (Dropdown Menu)
 
@@ -79,38 +80,41 @@ The frontend is locally hosted at: http://localhost:5173/
 
 ### 3. **Set up Backend**
 
-To set up .venv: 
-
+Navigate to the backend directory and create a virtual environment:
 ```bash
 cd fastapi_project
 python3 -m venv .venv
 source .venv/bin/activate
+```
+
+Install the required dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+If a requirements.txt file is not provided, install FastAPI manually:
+```bash
 pip install "fastapi[standard]"
 ```
 
-Make sure you have the **OpenAI API** keys set up in your environment. To do this, create a `.env` file in the `backend` directory with the following:
+Make sure you have the **OpenAI API** keys set up in your environment. To do this, create a `.env` file in the backend directory with the following:
 
 ```env
 OPENAI_API_KEY=your_openai_api_key
 ```
 
-To run: 
+From inside the fastapi_project directory, start the FastAPI server:
 ```bash
-in fastapi_project folder, run: 
 uvicorn app.main:app --reload
 ```
-Note that the backend is running on http://127.0.0.1:8000
+The backend will run locally at http://127.0.0.1:8000
 
-To add historic data, add the csv to fastapi_project/data and run the following command in the fastapi_project directory:
-```bash
-python -m scripts.import_historic_stock_data --file data/filename.csv
-```
-
-Note that the Docker environment must be running before you do this. To do that, you run the command: 
+Make sure the Docker environment is running before importing historical data:
 ```bash
 docker compose up -d
 ```
 
-## **License**
-
-This project is open-source and available under the MIT License.
+To add historical data, add the csv to fastapi_project/data and run the following command in the fastapi_project directory:
+```bash
+python -m scripts.import_historic_stock_data --file data/filename.csv
+```
