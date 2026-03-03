@@ -25,7 +25,7 @@ This project was created during the UA Innovate Hackathon at The University of A
   - Highlights critical locations where stock levels have reached zero
 
 **Live Intelligence Table**
-  - Displays when a report was submitted, the affected location, the resource mentioned, and the status.
+  - Displays when a report was submitted, the affected location, the resource mentioned, and the status
 
 **Live Intelligence Report Submission**
   - Submit raw text reports through a frontend form
