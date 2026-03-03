@@ -7,7 +7,7 @@
 ## Demo
 
 <p align="center">
-  <img src="assets/demo_video.gif" alt="Project Sentinel Demo" />
+  <img src="assets/demo_projectSentinel.gif" alt="Project Sentinel Demo" />
 </p>
 
 ---
