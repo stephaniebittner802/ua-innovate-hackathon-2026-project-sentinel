@@ -1,6 +1,6 @@
 # Project Sentinel - UA Innovate Hackathon 2026
 
-**Project Sentinel** is a full-stack intelligence dashboard designed to monitor resource levels across multiple locations. It displays trends in an interactive chart, forecasts future shortages via a simple machine-learning algorithm, and extracts data from reports via a Large Language Model.
+**Project Sentinel** is a full-stack monitoring system that tracks resource levels across multiple locations. It displays trends in an interactive chart, forecasts future shortages via a simple machine-learning algorithm, and extracts data from reports via a Large Language Model.
 This project was created during the UA Innovate Hackathon at The University of Alabama from February 28 to March 1, 2026.
 
 ## Demo
